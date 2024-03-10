@@ -1,15 +1,7 @@
 pipeline {
-
   agent any
 
   stages {
-    stage('Clone repository') {
-      steps {
-        checkout([$class: 'GitSCM',
-          //branches: [[name: '*/main']],  // Commented out if not specifying branch
-          userRemoteConfigs: [[url: 'https://github.com/satyamksharma/PES2UG21CS486_Jenkins.git']]])
-      }
-    }
     stage('Build') {
       steps {
         build 'PES2UG21CS486-1'

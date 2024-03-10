@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         build 'PES2UG21CS486-1'
-        sh 'g++ main.cpp -o output' // Add shell script to compile .cpp file (use 'sh' for Unix-based systems, 'bat' for Windows)
+        sh 'g++ working.cpp -o output' // Add shell script to compile .cpp file (use 'sh' for Unix-based systems, 'bat' for Windows)
       }
     }
     stage('Test') {
